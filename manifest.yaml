@@ -9,7 +9,7 @@ packages:
           provide-api-key: true
         inputs:
           secret:
-            type: string
+            value: ${SECRET}
   dmnized:
     actions:
       botmamba____:

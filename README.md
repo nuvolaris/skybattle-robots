@@ -1,11 +1,41 @@
-# skybattle-robots
+# Welcome to SkyBattle
 
-On 30th of may, Nimbella Cloud will be discontinued and your robots lost.
+SkyBattle is a programming game. You have to write the code to program a robot fighting agaist another robot.
 
-Recover your robot before it is too late and contribute it to this repo with a pull request.
+The engine runs in Kubernetes or in Docker, and every robot controller is a micro-service running in Kubernetes.
 
-Go [here](http://bit.ly/nimbots) login and copy the code.
+You need either a Kubernetes cluster or a local Docker instance.
 
-Contribute your robot here with a pull request.
+Download and unpack the distribution appropriate for you operating system and architecture.
 
-Place your robots under `<github-user>/<robot-name>`
+If you have a local Docker Desktop you need to setup Nuvolaris with:
+
+```
+./nuv setup --devcluster
+````
+
+then you can install SkyBattle.  You need two steps.
+
+First, you have to set the environment variable with a password to access it. Use:
+
+```
+# command for Mac and Linux
+export SECRET=<your-password>
+# command for Windows CMD,exe
+set SECRET=<your-password>
+```
+
+Then install skybattle with:
+
+```
+./nuv project deploy
+```
+
+Finally get the url with 
+
+
+```
+./nuv url skybattle
+```
+
+Go to that url and start playing.
